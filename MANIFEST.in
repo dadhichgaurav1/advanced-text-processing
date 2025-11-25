@@ -1,0 +1,52 @@
+# Include documentation and metadata files
+include README.md
+include LICENSE
+include CHANGELOG.md
+include CONTRIBUTING.md
+include CODE_OF_CONDUCT.md
+include ACKNOWLEDGEMENTS.md
+include requirements.txt
+include requirements-dev.txt
+include pyproject.toml
+
+# Include documentation
+recursive-include docs *.md *.rst *.txt
+
+# Include examples
+recursive-include examples *.py *.md
+
+# Include tests
+recursive-include tests *.py
+
+# Exclude development and build artifacts
+exclude .gitignore
+exclude .pytest_cache
+exclude setup.py
+recursive-exclude * __pycache__
+recursive-exclude * *.py[co]
+recursive-exclude * *.so
+recursive-exclude * .DS_Store
+recursive-exclude * *.egg-info
+exclude .coverage
+exclude htmlcov
+recursive-exclude htmlcov *
+exclude .tox
+recursive-exclude .tox *
+exclude dist
+recursive-exclude dist *
+exclude build
+recursive-exclude build *
+exclude .venv
+recursive-exclude .venv *
+exclude venv
+recursive-exclude venv *
+exclude .idea
+recursive-exclude .idea *
+exclude .vscode
+recursive-exclude .vscode *
+
+# Exclude demo and test data
+exclude demo_*.py
+exclude quick_test.py
+exclude gv
+recursive-exclude gv *
