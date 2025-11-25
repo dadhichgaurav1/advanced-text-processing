@@ -5,7 +5,7 @@ transformers>=4.30.0
 
 # WordNet and synonym support
 spacy-wordnet>=0.1.0
-nltk>=3.3
+nltk>=3.3,<3.6
 
 # HTTP client and rate limiting for Wikidata API
 requests>=2.31.0

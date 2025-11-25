@@ -88,7 +88,7 @@ Issues = "https://github.com/dadhichgaurav1/advanced-text-processing/issues"
 Changelog = "https://github.com/dadhichgaurav1/advanced-text-processing/blob/main/CHANGELOG.md"
 
 [tool.setuptools]
-packages = ["ner_lib"]
+packages = {find = {where = ["."], include = ["ner_lib*"]}}
 
 [tool.setuptools.package-data]
 ner_lib = ["py.typed"]
