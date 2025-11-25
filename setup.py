@@ -8,7 +8,7 @@ with open("requirements.txt", "r", encoding="utf-8") as fh:
 
 setup(
     name="advanced-text-processing",
-    version="0.2.0",
+    version="0.2.1",
     author="Gaurav Dadhich",
     description="A powerful Named Entity Recognition and Resolution library with semantic matching",
     long_description=long_description,
