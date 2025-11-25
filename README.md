@@ -56,7 +56,21 @@ for entity in result['entities']:
 # Cupertino (GPE)
 ```
 
-### Semantic Canonicalization
+### Entity Canonicalization
+
+```python
+from ner_lib import canonicalize_entity
+
+# Canonicalize an entity mention
+result = canonicalize_entity("apple inc", mode="progressive")
+print(f"Canonical: {result['canonical_name']}")
+print(f"Aliases: {result['aliases']}")
+# Output: 
+# Canonical: Apple Inc.
+# Aliases: ['Apple', 'AAPL', 'Apple Computer', ...]
+```
+
+### Relationship Canonicalization
 
 ```python
 from ner_lib import Config, canonicalize_relationship
@@ -66,7 +80,7 @@ config = Config()
 config.semantic_matching.enabled = True
 config.semantic_matching.canonical_relationships = ["depends_on", "created_by"]
 
-# Canonicalize a phrase
+# Canonicalize a relationship phrase
 result = canonicalize_relationship("relies heavily on", config=config)
 print(f"Canonical: {result['canonical_name']}")
 # Output: Canonical: depends_on
